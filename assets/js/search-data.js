@@ -85,7 +85,10 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{
+            },},{id: "news-tada-our-paper-snap-towards-segmenting-anything-in-any-point-cloud-is-accepted-to-3dv-2026-as-an-oral-presentation",
+          title: ':tada: Our paper SNAP: Towards Segmenting Anything in Any Point Cloud is accepted...',
+          description: "",
+          section: "News",},{
         id: 'social-cv',
         title: 'CV',
         section: 'Socials',
