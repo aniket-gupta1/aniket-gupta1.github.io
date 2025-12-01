@@ -18,10 +18,24 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "A growing collection of your cool projects.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
+          },
+        },{id: "nav-gallery",
+          title: "Gallery",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/gallery/";
+          },
+        },{id: "nav-experience",
+          title: "Experience",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/experience/";
           },
         },{id: "nav-cv",
           title: "CV",
@@ -29,13 +43,6 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
-          },
-        },{id: "nav-teaching",
-          title: "Teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
           },
         },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
         
@@ -64,7 +71,13 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-after-putting-it-off-for-almost-3-years-i-have-finally-decided-to-update-my-website",
+            },},{id: "news-i-am-attending-the-elite-robotics-summer-school-in-denmark-for-3-weeks",
+          title: 'I am attending the Elite Robotics Summer School in Denmark for 3 weeks....',
+          description: "",
+          section: "News",},{id: "news-we-are-starting-our-expedition-in-svalbard-today-to-study-and-quantify-glacier-melts",
+          title: 'We are starting our expedition in Svalbard today to study and quantify glacier...',
+          description: "",
+          section: "News",},{id: "news-after-putting-it-off-for-almost-3-years-i-have-finally-decided-to-update-my-website",
           title: 'After putting it off for almost 3 years, I have finally decided to...',
           description: "",
           section: "News",},{id: "news-tada-our-paper-a-system-for-multi-view-mapping-of-dynamic-scenes-using-time-synchronized-uavs-is-accepted-to-iros-2025-as-an-oral-presentation",
@@ -79,59 +92,22 @@ ninja.data = [{
           section: "News",},{id: "news-tada-our-paper-snap-towards-segmenting-anything-in-any-point-cloud-is-accepted-to-3dv-2026-as-an-oral-presentation",
           title: ':tada: Our paper SNAP: Towards Segmenting Anything in Any Point Cloud is accepted...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-iaf-mehar-baba-prize-competition",
+          title: 'IAF Mehar Baba Prize Competition',
+          description: "Swarm drones for long-range, BVLOS search and rescue missions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-neuroam",
+          title: 'NeuROAM',
+          description: "A large scale, multi-robot dataset to push the limits of current mapping systems.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-svalbard-expedition",
+          title: 'Svalbard Expedition',
+          description: "A short ecpedition to the Arctic to understand and quantify glacier melt with modern computer vision.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
             },},{
-        id: 'social-cv',
-        title: 'CV',
-        section: 'Socials',
-        handler: () => {
-          window.open("/assets/pdf/Aniket_CV.pdf", "_blank");
-        },
-      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
