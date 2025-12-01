@@ -1,81 +1,99 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
-importance: 1
+title: IAF Mehar Baba Prize Competition
+description: Swarm drones for long-range, BVLOS search and rescue missions.
+img: assets/img/mehar_baba.jpeg
+importance: 3
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+The **Mehar Baba Prize Competition** was a high-stakes initiative by the **Indian Air Force (IAF)** to identify and nurture the development of indigenous swarm drone capabilities for Humanitarian Aid and Disaster Relief (HADR) operations.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+As the **Team Lead** of [UAS DTU](https://uasdtu.com/) (a team of 65 researchers at the time), I led the development of a heterogeneous swarm of 25 Unmanned Aerial Vehicles (UAVs) capable of autonomous operations over a range of 50 km. We were one of only five teams selected for the final phase from across India. You can watch the official IAF project video [here](https://www.youtube.com/watch?v=h3QLFirilNo).
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<div class="row mt-3">
+    <div class="col-sm-12">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1 rounded">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/h3QLFirilNo" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div class="caption">
+    Official IAF video covering the Mehar Baba Competition.
+</div>
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/gallery/UAS_DTU_Swarm_In_Air.jpeg" title="Swarm Formation" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    The whole UAV swarm in operation. 
 </div>
+
+### Mission Profile
+1. **Long-Range Endurance:** Design UAVs capable of traveling up to 50 km to a target search area, completing the mission, and returning.
+2. **Complex Navigation:** Navigate a swarm of at least 25 UAVs to a search area located ~50 km from the takeoff location, handling both **GPS-enabled** and **GPS-denied** environments.
+3. **Efficient Search:** Develop an area search algorithm that detects human survivors significantly faster than standard grid search methods.
+4. **Payload Delivery:** Detect human survivors and safely drop relief material payloads to their specific locations.
+5. **Night Operations:** Ensure the swarm is fully capable of performing operations in low-light and night conditions.
+
+### Key Achievements
+
+* **Scale:** Scaled operations from a single unit to a synchronized swarm of **25 UAVs**.
+* **Funding:** Secured **INR 7.5 Crores ($1 Million)** via a comprehensive MoU with **Adani Defence and Aerospace** and built the complete system within this constrained budget.
+* **Impact:** Demonstrated a working solution to the Indian Air Force, successfully completing the mission profile. 
+* **Innovation:** Developed a custom navigation controller for the UAV swarm {% cite gupta2020swarm %} and an optimized target-search algorithm {% cite gupta2021particle %}.
+
+---
+
+### Personal Contribution
+
+My primary technical contribution focused on the intersection of **multi-agent systems, control dynamics, and path planning**. None of this would have been possible without my wonderful teammates, so a special thanks to Team UAS-DTU.
+
+#### 1. Swarm Navigation & Control
+I developed a navigation controller utilizing **consensus equations** to manage waypoint navigation, collision avoidance, and formation control. This ensured that the drones could move as a cohesive unit without colliding, even when scaling up to 25 agents.
+
+#### 2. Optimization Algorithms
+For the disaster relief scenario, the swarm needed to identify targets (simulated survivors/supplies) efficiently. I designed an **optimized target-search algorithm** based on the **Particle Swarm Optimization (PSO)** technique. This allowed the UAVs to:
+* Communicate findings to neighbors.
+* Converge on target clusters in minimum time.
+* Ensure rapid response allocation.
+
+#### 3. Human Survivor Detection System
+We collected a large dataset using **RGB** (day operation) and **Thermal** (night operations) cameras, labeled the data, and trained a **YOLOv6-tiny** architecture to detect human survivors in the search area.
+
+#### 4. System Integration
+Along with my teammates, we built a robust **ROS (Robot Operating System)** pipeline. This acted as the backbone, connecting:
+* Low-level flight control (ArduPilot/PX4).
+* High-level swarm logic.
+* Communication modules for inter-agent data sharing.
+
+---
+
+### Leadership & Management
+
+Transitioning from a technical contributor to the **Team Lead**, my responsibilities shifted towards project management and resource acquisition.
+
+* **Strategic Partnership:** I led negotiations and signed a comprehensive MoU with Adani Defence and Aerospace, securing the critical funding needed to build 25 industrial-grade UAVs.
+* **Operations:** Managed a timeline spanning over 18 months, coordinating between software, avionics, and airframe sub-teams.
+* **Resilience:** The project involved over **100 hours of flight tests**. We faced numerous crashes and hardware failures. Keeping the team motivated through these setbacks was as crucial as the engineering itself.
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-5 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/gallery/UAS_DTU_Gaia_on_ground.jpeg" title="Gaia Drone" class="img-fluid rounded z-depth-1 fixed-height-img" %}
+    </div>
+    <div class="col-sm-7 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/gallery/UAS_DTU_Swarm_on_ground_2.jpeg" title="Full Deployment" class="img-fluid rounded z-depth-1 fixed-height-img" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Left: One of the heavy-lift 'Gaia' platforms. Right: The complete formation lined up on the runway ready for the final demonstration.
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### 🏁 The Outcome
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+After months of rigorous testing and optimization, we deployed the full swarm of 25 UAVs in the final challenge. The system successfully took off, performed the optimal area search, identified targets, and returned to base, validating our consensus algorithms and hardware robustness in a real-world, high-pressure environment.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+This project was a defining moment in my engineering journey, teaching me how to bridge the gap between theoretical research and practical, deployable systems.

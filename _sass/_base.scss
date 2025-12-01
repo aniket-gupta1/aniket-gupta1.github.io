@@ -710,6 +710,39 @@ footer.sticky-bottom {
     margin-bottom: 1rem;
     text-align: right;
   }
+
+  .card-img-overlay-wrapper {
+    position: relative;
+    overflow: hidden;
+    // Add max-height here to control the wrapper's height
+    max-height: 200px; /* Adjust this value as needed, e.g., 100px-200px */
+    width: 100%; // Ensure it takes full width
+  }
+
+  .project-card-img {
+    width: 100%;
+    height: 100%; /* Make the image fill the wrapper's height */
+    display: block;
+    /* Use object-fit: cover to crop the image nicely if it's taller than the max-height */
+    object-fit: cover;
+    object-position: center top; /* Optional: Adjusts what part of the image is visible. 'center top' focuses on the top part. */
+  }
+
+  .image-fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 50%,
+      var(--global-card-bg-color) 100%
+    );
+  }
 }
 
 // Publications

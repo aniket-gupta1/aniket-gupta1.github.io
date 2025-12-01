@@ -1,0 +1,19 @@
+- year: 2025
+  location: "New Delhi, India"
+  images:
+    - filename: "UAS_DTU_Drone_Olympics.jpg"
+      width: 1280
+      height: 853
+      caption: "Drone Olympics at DTU"
+    - filename: "UAD-DTU_Lab.jpeg"
+      width: 1280
+      height: 960
+      caption: "UAD-DTU Lab"
+
+- year: 2024
+  location: "Jaisalmer, India"
+  images:
+    - filename: "Jaisalmer_Team_picture.jpg"
+      width: 1280
+      height: 853
+      caption: "Team picture in Jaisalmer"
