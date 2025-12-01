@@ -104,7 +104,7 @@ ninja.data = [{
               window.location.href = "/projects/2_project/";
             },},{id: "projects-svalbard-expedition",
           title: 'Svalbard Expedition',
-          description: "A short ecpedition to the Arctic to understand and quantify glacier melt with modern computer vision.",
+          description: "An expedition to the Arctic to understand and quantify glacier melt with modern computer vision.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{
