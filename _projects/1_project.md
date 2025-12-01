@@ -2,7 +2,7 @@
 layout: page
 title: IAF Mehar Baba Prize Competition
 description: Swarm drones for long-range, BVLOS search and rescue missions.
-img: assets/img/mehar_baba.jpeg
+img: assets/img/Mehar_Baba.jpeg
 importance: 3
 category: work
 related_publications: true
@@ -11,17 +11,6 @@ related_publications: true
 The **Mehar Baba Prize Competition** was a high-stakes initiative by the **Indian Air Force (IAF)** to identify and nurture the development of indigenous swarm drone capabilities for Humanitarian Aid and Disaster Relief (HADR) operations.
 
 As the **Team Lead** of [UAS DTU](https://uasdtu.com/) (a team of 65 researchers at the time), I led the development of a heterogeneous swarm of 25 Unmanned Aerial Vehicles (UAVs) capable of autonomous operations over a range of 50 km. We were one of only five teams selected for the final phase from across India. You can watch the official IAF project video [here](https://www.youtube.com/watch?v=h3QLFirilNo).
-
-<div class="row mt-3">
-    <div class="col-sm-12">
-        <div class="embed-responsive embed-responsive-16by9 z-depth-1 rounded">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/h3QLFirilNo" allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-<div class="caption">
-    Official IAF video covering the Mehar Baba Competition.
-</div>
 
 <div class="row">
     <div class="col-sm-12 mt-3 mt-md-0">
@@ -52,19 +41,19 @@ As the **Team Lead** of [UAS DTU](https://uasdtu.com/) (a team of 65 researchers
 
 My primary technical contribution focused on the intersection of **multi-agent systems, control dynamics, and path planning**. None of this would have been possible without my wonderful teammates, so a special thanks to Team UAS-DTU.
 
-#### 1. Swarm Navigation & Control
+##### 1. Swarm Navigation & Control
 I developed a navigation controller utilizing **consensus equations** to manage waypoint navigation, collision avoidance, and formation control. This ensured that the drones could move as a cohesive unit without colliding, even when scaling up to 25 agents.
 
-#### 2. Optimization Algorithms
+##### 2. Optimization Algorithms
 For the disaster relief scenario, the swarm needed to identify targets (simulated survivors/supplies) efficiently. I designed an **optimized target-search algorithm** based on the **Particle Swarm Optimization (PSO)** technique. This allowed the UAVs to:
 * Communicate findings to neighbors.
 * Converge on target clusters in minimum time.
 * Ensure rapid response allocation.
 
-#### 3. Human Survivor Detection System
+##### 3. Human Survivor Detection System
 We collected a large dataset using **RGB** (day operation) and **Thermal** (night operations) cameras, labeled the data, and trained a **YOLOv6-tiny** architecture to detect human survivors in the search area.
 
-#### 4. System Integration
+##### 4. System Integration
 Along with my teammates, we built a robust **ROS (Robot Operating System)** pipeline. This acted as the backbone, connecting:
 * Low-level flight control (ArduPilot/PX4).
 * High-level swarm logic.
@@ -90,6 +79,18 @@ Transitioning from a technical contributor to the **Team Lead**, my responsibili
 </div>
 <div class="caption">
     Left: One of the heavy-lift 'Gaia' platforms. Right: The complete formation lined up on the runway ready for the final demonstration.
+</div>
+
+
+<div class="row mt-3">
+    <div class="col-sm-12">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1 rounded">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r5Yi_kZOJro" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div class="caption">
+    Demonstration of UAV swarm operations in one of the test missions. 
 </div>
 
 ### 🏁 The Outcome
